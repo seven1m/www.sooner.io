@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sooner.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sooner.io is the distributed job scheduling engine and web-based management app built on Node.js and Hook.io, brought to you from the Sooner State.">
+    <meta name="author" content="Tim Morgan <tim@timmorgan.org>">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body  { padding: 25px 10px; }
+      h1,h2 { font-family: "Happy Monkey", Arial, Helvetica, sans-serif;
+              color: #b00000; }
+      h1    { margin-bottom: 25px;
+              font-size: 28pt; }
+      h2    { margin-bottom: 15px; }
+      p     { margin-bottom: 25px; }
+    </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"> $(function() { $('.carousel').carousel({interval: 10000}); }); </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span8 offset2">
+          <h1>Sooner.io</h1>
+          <p>Sooner.io is the distributed job scheduling engine and web-based management
+            app built on <a href="http://nodejs.org">Node.js</a> and <a href="http://hook.io">Hook.io</a>,
+            brought to you from the <a href="http://en.wikipedia.org/wiki/Oklahoma">Sooner State</a>.</p>
+
+          <div id="screenshots" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="img/job-list.png" alt="Job List">
+                <div class="carousel-caption">
+                  <h4>Job List</h4>
+                  <p>Manage many jobs all from a single interface, and distribute their load across any number of machines on the network.</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="img/edit-job.png" alt="Job Management">
+                <div class="carousel-caption">
+                  <h4>Job Management</h4>
+                  <p>Create, edit, and schedule jobs from the web interface. Write your job code in CoffeeScript!</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="img/job.png" alt="Job Monitoring">
+                <div class="carousel-caption">
+                  <h4>Job Monitoring</h4>
+                  <p>Monitor output of your job in real-time, whether or not it succeeds.</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="img/status.png" alt="Status Page">
+                <div class="carousel-caption">
+                  <h4>Status Page</h4>
+                  <p>See the connectedness of various nodes in the system and messages being sent via Hook.io.</p>
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#screenshots" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#screenshots" data-slide="next">&rsaquo;</a>
+          </div>
+
+          <h2>More Info</h2>
+          <p>
+            <a href="https://github.com/seven1m/sooner.io">github.com/seven1m/sooner.io</a>
+            (<a href="https://github.com/seven1m/sooner.io/blob/master/README.md">README</a>)
+          </p>
+          <p>
+            Author: <a href="http://timmorgan.org">timmorgan.org</a> / 
+            <a href="http://twitter.com/seven1m">@seven1m</a>
+          </p>
+
+          <a href="https://github.com/seven1m/sooner.io"><img class="hidden-phone" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</body>
