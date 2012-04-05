@@ -11,13 +11,18 @@
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
     <style type="text/css">
-      body  { padding: 25px 10px; }
-      h1,h2 { font-family: "Happy Monkey", Arial, Helvetica, sans-serif;
-              color: #b00000; }
-      h1    { margin-bottom: 25px;
-              font-size: 28pt; }
-      h2    { margin-bottom: 15px; }
-      p     { margin-bottom: 25px; }
+      body      { padding: 25px 10px; }
+      h1,h2     { font-family: "Happy Monkey", Arial, Helvetica, sans-serif;
+                  color: #b00000; }
+      h1        { margin-bottom: 25px;
+                  font-size: 28pt; }
+      h2        { margin-bottom: 15px; }
+      p         { margin-bottom: 15px; }
+      .border   { border: 1px solid #ddd; }
+      .push     { margin-top: 35px; }
+      ul li     { margin-bottom: 8px; }
+      img       { max-width: 100%; margin-bottom: 25px; }
+      p img     { margin: 0; }
     </style>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -41,56 +46,64 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="span8 offset2">
+        <div class="span9 offset1">
           <h1>Sooner.io</h1>
-          <p>Sooner.io is the distributed job scheduling engine and web-based management
-            app built on <a href="http://nodejs.org">Node.js</a> and <a href="http://www.mongodb.org/">MongoDB</a>,
-            brought to you from the <a href="http://en.wikipedia.org/wiki/Oklahoma">Sooner State</a>.</p>
 
-          <div id="screenshots" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="img/job-list.png" alt="Job List">
-                <div class="carousel-caption">
-                  <h4>Job List</h4>
-                  <p>Manage many jobs all from a single interface, and distribute their load across any number of machines on the network.</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/edit-job.png" alt="Job Management">
-                <div class="carousel-caption">
-                  <h4>Job Management</h4>
-                  <p>Create, edit, and schedule jobs from the web interface. Write your job code in CoffeeScript!</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/job.png" alt="Job Monitoring">
-                <div class="carousel-caption">
-                  <h4>Job Monitoring</h4>
-                  <p>Monitor output of your job in real-time, whether or not it succeeds.</p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="img/status.png" alt="Status Page">
-                <div class="carousel-caption">
-                  <h4>Status Page</h4>
-                  <p>See the connectedness of nodes in the system.</p>
-                </div>
-              </div>
+          <div class="row">
+            <div class="span6">
+              <p>Sooner.io is a distributed job scheduling engine and web-based management
+                app built on <a href="http://nodejs.org">Node.js</a> and <a href="http://www.mongodb.org/">MongoDB</a>,
+                brought to you from the <a href="http://en.wikipedia.org/wiki/Oklahoma"><img src="img/ok.png" alt="Oklahoma"/></a>
+                <a href="http://en.wikipedia.org/wiki/Oklahoma">Sooner State</a>.</p>
+              <p>Jobs can be run on-demand, scheduled to run via Cron, or triggered by events emitted from other jobs or distributed nodes.</p>
             </div>
-            <a class="left carousel-control" href="#screenshots" data-slide="prev">&lsaquo;</a>
-            <a class="right carousel-control" href="#screenshots" data-slide="next">&rsaquo;</a>
+            <div class="span3">
+              <ul class="unstyled">
+                <li><i class="icon-file"></i> <a href="https://github.com/seven1m/sooner.io/blob/master/README.md">README</a></li>
+                <li><i class="icon-download"></i> <a href="https://github.com/seven1m/sooner.io">github.com/seven1m/sooner.io</a></li>
+                <li><i class="icon-heart"></i> by <a href="http://timmorgan.org">Tim Morgan</a> &middot; <a href="http://twitter.com/seven1m">@seven1m</a></li>
+              </ul>
+            </div>
           </div>
 
-          <h2>More Info</h2>
-          <p>
-            <a href="https://github.com/seven1m/sooner.io">github.com/seven1m/sooner.io</a>
-            (<a href="https://github.com/seven1m/sooner.io/blob/master/README.md">README</a>)
-          </p>
-          <p>
-            Author: <a href="http://timmorgan.org">timmorgan.org</a> / 
-            <a href="http://twitter.com/seven1m">@seven1m</a>
-          </p>
+          <div class="row push">
+            <div class="span6">
+              <img src="img/job.small.png" class="border" alt="Job Snapshot and History">
+            </div>
+            <div class="span3">
+              <h2>Snapshot &amp; History</h2>
+              <p>The job snapshot page gives you at-a-glance health of work completed and/or to-be-done.</p>
+              <ul class="unstyled">
+                <li><i class="icon-ok"></i> most recent results</li>
+                <li><i class="icon-ok"></i> progress of running tasks</li>
+                <li><i class="icon-ok"></i> task console output</li>
+                <li><i class="icon-ok"></i> ability to run on-demand</li>
+                <li><i class="icon-ok"></i> real-time status via <a href="http://socket.io">Socket.io</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row push">
+            <div class="span6">
+              <img src="img/def.png" class="border" alt="Job Definition">
+            </div>
+            <div class="span3">
+              <h2>Defining a Job</h2>
+              <p>Your job definition is written in <a href="http://coffeescript.org">CoffeeScript</a> and has access to a growing list of
+                <a href="https://github.com/seven1m/sooner.io/blob/master/README.md#job-api">API methods</a> for accessing the outside world.</p>
+            </div>
+          </div>
+
+          <div class="row push">
+            <div class="span6">
+              <img src="img/output.png" class="border" alt="Running Job Console Output"/>
+            </div>
+            <div class="span3">
+              <h2>Console Output</h2>
+              <p>Since your job is defined in CoffeeScript, and all output is captured, you can log as much as you want using <code>console.log()</code>.
+                Output is displayed line-by-line in real-time on the job page.</p>
+            </div>
+          </div>
 
           <a href="https://github.com/seven1m/sooner.io"><img class="hidden-phone" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
         </div>
