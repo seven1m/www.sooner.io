@@ -24,6 +24,7 @@
       ul li     { margin-bottom: 8px; }
       img       { max-width: 100%; margin-bottom: 25px; }
       p img     { margin: 0; }
+      .nowrap   { white-space: nowrap; }
     </style>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -103,16 +104,18 @@
               <img src="img/def.png" class="border" alt="Job Definition">
             </div>
             <div class="span3">
-              <h2>Job Scripts</h2>
+              <h2>Language Choice</h2>
               <p>Your job scripts can be written in any language.</p>
-              <ul class="unstyled">
-                <li><i class="icon-ok"></i> CoffeeScript</li>
-                <li><i class="icon-ok"></i> JavaScript</li>
-                <li><i class="icon-ok"></i> Ruby</li>
-                <li><i class="icon-ok"></i> Python</li>
-                <li><i class="icon-ok"></i> Bash</li>
-              </ul>
-              <p>...and more!</p>
+              <p>If you can run it from a terminal on your server, so can Sooner.io.</p>
+              <p>
+                <span class="nowrap"><i class="icon-ok"></i> CoffeeScript</span>
+                <span class="nowrap"><i class="icon-ok"></i> JavaScript</span>
+                <span class="nowrap"><i class="icon-ok"></i> Ruby</span>
+                <span class="nowrap"><i class="icon-ok"></i> Python</span>
+                <span class="nowrap"><i class="icon-ok"></i> Perl</span>
+                <span class="nowrap"><i class="icon-ok"></i> Bash</span>
+                ... and more!
+              </p>
             </div>
           </div>
 
@@ -132,9 +135,9 @@
               <img src="img/output.png" class="border" alt="Running Job Console Output"/>
             </div>
             <div class="span3">
-              <h2>Console Output</h2>
-              <p>All script output is captured, you can log as much as you want using <code>console.log()</code> (JavaScript/CoffeeScript), <code>echo</code> (Bash), or whatever.
-                Output is displayed line-by-line in real-time in the job management web interface.</p>
+              <h2>Script Feedback</h2>
+              <p>All script output is logged and displayed line-by-line in real-time in the job management web interface.</p>
+              <p>Your script also directly controls the progress bar, and process exit code determines pass/fail.</p>
             </div>
           </div>
 
