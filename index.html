@@ -28,7 +28,18 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript"> $(function() { $('.carousel').carousel({interval: 10000}); }); </script>
+    <script type="text/javascript">
+      $(function() {
+        $.getJSON('https://github.com/api/v2/json/repos/show/seven1m/sooner.io/tags?callback=?', function(data){
+          var versions = [];
+          for(var tag in data.tags) {
+            versions.push(tag);
+          }
+          versions.sort().reverse();
+          $('#version').html(versions[0]);
+        });
+      });
+    </script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -64,7 +75,7 @@
             <div class="span3">
               <ul class="unstyled">
                 <li><i class="icon-file"></i> <a href="https://github.com/seven1m/sooner.io/blob/master/README.md">README</a></li>
-                <li><i class="icon-download"></i> <a href="https://github.com/seven1m/sooner.io">github.com/seven1m/sooner.io</a></li>
+                <li><i class="icon-download"></i> <a href="https://github.com/seven1m/sooner.io">seven1m/sooner.io <span id="version"></span></a></li>
                 <li><i class="icon-heart"></i> by <a href="http://timmorgan.org">Tim Morgan</a> &middot; <a href="http://twitter.com/seven1m">@seven1m</a></li>
               </ul>
             </div>
